@@ -1,0 +1,47 @@
+<div>
+    <a class="btn btn-success btn-lg logoutLblPos" (click)="offLogin()">
+        <span>Salir</span>
+    </a>    
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div>
+                <div>
+                    <div><br>
+                        <h4>Ventas de </h4>
+                        <div style="display: block" class="paddingT">
+                            <canvas baseChart [datasets]="barChartData" [colors]="lineChartColors1" [labels]="barChartLabels" [options]="barChartOptions"
+                            [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)"
+                            (chartClick)="chartClicked($event)"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div>
+                <div>
+                    <div><br>
+                        <h4>Últimas Ventas </h4>
+                        <div style="display: block" class="paddingT">
+                            <canvas baseChart [datasets]="barChartData" [colors]="lineChartColors" [labels]="barChartLabels" [options]="barChartOptions"
+                            [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)"
+                            (chartClick)="chartClicked($event)"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Seleccione Producto
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+    </div>
+</div>

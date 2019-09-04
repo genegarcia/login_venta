@@ -1,0 +1,27 @@
+<div class="container formularioLogin">
+    <div class="row">
+        <div class="card card-body bg-light">
+            <div class="p-3 mb-5">
+                <h2 class="text-center" *ngIf="!isError">Inicie Sesión</h2>
+                <hr>
+                <form #formLogin="ngForm" (ngSubmit)="onLogin(formLogin)" >
+                    <div class="alert alert-danger" role="alert" *ngIf="isError">
+                        Something is wrong!
+                    </div>
+                    <div class="form-group">
+                      <label for="userName">Usuario</label>
+                      <input type="text" class="form-control" id="user" name="user" placeholder="ingrese usuario" [(ngModel)]="user.user">
+                    </div>
+                    <div class="form-group">
+                      <label for="userPassword">Contraseña</label>
+                      <input type="password" class="form-control" id="password" name="password" placeholder="ingrese contraseña" [(ngModel)]="user.pass">
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary text-center">Ingresar</button>
+                    </div>
+                  </form>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>
